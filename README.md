@@ -1,15 +1,16 @@
-# AlertDrive — Driver Drowsiness Detection (Frontend)
+# AlertDrive — Real-time Driver Drowsiness Detection (Web App)
 
-AlertDrive is a driver safety web application UI designed to promote safe driving by providing pre-drive guidance and a clean dashboard-style experience.  
-This repository contains the frontend built with React + TypeScript.
+AlertDrive is a real-time driver drowsiness detection web application that uses a live webcam feed to monitor the driver’s face and trigger alerts when drowsiness indicators are detected (e.g., prolonged eye closure). The system provides audio alarm + voice warnings for immediate attention.
 
 ---
 
 ## Features
-- Clean and responsive UI for driver safety guidance
-- Pre-drive safety instructions and warnings
-- Modern component-based design using shadcn/ui
-- Mobile-friendly layout
+- Live webcam feed monitoring
+- Face detection and tracking in real-time
+- Drowsiness alert trigger (alarm sound)
+- Voice warning using Text-to-Speech
+- Activity log for detection events
+- Responsive UI dashboard
 
 ---
 
@@ -22,8 +23,8 @@ This repository contains the frontend built with React + TypeScript.
 
 ---
 
-## Getting Started (Run Locally)
+## Run Locally
 
 ### 1) Clone the repository
 ```sh
-git clone https://github.com/yashmitrai/alertdrive-eyes-on-path.git
+git clone https://github.com/yashmitrai/AlertDrive-Driver-Drowsiness-Detection.git
