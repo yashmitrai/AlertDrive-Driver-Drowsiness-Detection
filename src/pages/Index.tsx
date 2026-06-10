@@ -75,7 +75,7 @@ const Index = () => {
       setEyeStatus("open");
       
       // Only log if warning was not given or eyes were closed for significant time
-      if (eyesClosedTime >= 5) {
+      if (eyesClosedTime >= 2) {
         addLog("Driver responded - Eyes open", "info");
       }
       
@@ -110,17 +110,17 @@ const Index = () => {
       setEyesClosedTime((prev) => {
         const newTime = prev + 1;
         
-        // 5 seconds: First warning
-        if (newTime === 5 && !warningGiven) {
-          addLog("Eyes closed for 5s - Warning", "warning");
+        // 2 seconds: First warning
+        if (newTime === 2 && !warningGiven) {
+          addLog("Eyes closed for 2s - Warning", "warning");
           setAlertLevel("warning");
           showVoice("Please look into the camera.");
           setWarningGiven(true);
         }
         
-        // 8 seconds (5 + 3): Driver down alert
-        if (newTime === 8) {
-          addLog("Eyes closed for 8s – Driver down alert", "danger");
+        // 5 seconds (2 + 3): Driver down alert
+        if (newTime === 5) {
+          addLog("Eyes closed for 5s – Driver down alert", "danger");
           setAlertLevel("danger");
           showVoice("Driver down", 3); // Repeat 3 times
           
